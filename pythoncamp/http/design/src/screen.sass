@@ -1,0 +1,236 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset
+
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+
+// Import the non-default scaffolding module.
+@import blueprint/scaffolding
+@import compass/utilities
+@import compass/css3
+
+// configuration
+
+$blueprint_font_family: unquote("Lucida Grande"), Helvetica, Arial, sans-serif
+$page_width: 960px
+$main_width: 600px
+$bigcolumn_width: 600px
+$main_container_width: $main_width + 20px
+$gutter_size: 30px
+$sidebar_width: $page_width - $bigcolumn_width - $gutter_size
+$panel_width: $main_width - 20px
+
+$row_gutter: 20px
+$row_width: ($page_width - 20px - 3 * $row_gutter) / 4
+
+$box_color: #333333
+
+//Recommended Blueprint configuration with scoping and semantic layout:
+body
+  +blueprint-basic-reset
+  //+blueprint-typography(true)
+  font-family: unquote("Lucida Grande"), Helvetica, Arial, sans-serif
+  font-size: 12px
+  line-height: 1.5
+  background: white image-url("bg.gif") repeat
+
+p
+  margin-bottom: 10px
+
+a
+  color: #358
+  text-decoration: none
+
+
+header
+  display: block
+  @include background-image(linear-gradient(#ffffff,#ddeeff))
+  margin: 0
+
+#headercontent, #footercontent
+  margin: 0 auto
+  width: $page_width
+
+#logo
+  padding-top: 10px
+  padding-bottom: 20px
+  margin: 0
+  +rotate(-2deg)
+  
+
+h2, h3
+  font-family: 'Yanone Kaffeesatz', serif
+  font-size: 25px
+  font-style: normal
+  font-weight: 400
+  text-shadow: none
+  text-decoration: none
+  text-transform: uppercase
+  letter-spacing: 0.053em
+  word-spacing: 0em
+  line-height: 1.2
+  color: #333
+  margin-bottom: 3px
+
+h3
+  font-size: 20px
+  color: #555
+
+footer
+  display: block
+  border-top: 5px solid #333333
+  padding-top: 30px
+  margin-top: 0px
+  #footer
+    color: #000033
+
+#main
+  background: white
+  margin: 0
+  padding-bottom: 150px
+
+.page
+  margin: 0 auto
+  width: $page_width
+  overflow: hidden
+
+#content
+  margin-top: 20px
+  overflow: hidden
+
+nav
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif
+  font-size: 26px
+  font-weight: 400
+  border-bottom: 1px solid #aaa
+  border-top: 1px solid #aaa
+  padding: 10px 0
+  margin: 0 0 5px 0
+  background: white
+  +box-shadow(rgba(0,0,0,0.5) 0 1px 5px)
+  color: #333
+
+#navblock
+  margin: 0 auto
+  width: $page_width
+
+#navcontent
+  display: block
+  overflow: auto
+  margin: 0
+  padding: 0
+  li
+    float: left
+    list-style: none
+    text-transform: uppercase
+    margin-left: 0px
+    margin-right: 80px
+  li:hover
+    a
+      color: black
+
+//
+// big column and sidebar
+//
+
+aside
+  float: right
+  margin: 0
+  padding: 10px
+  padding-right: 0
+  padding-top: 0
+  width: $sidebar_width
+  margin-top: 20px
+
+.bigcolumn
+  width: $bigcolumn_width
+  float: left
+  margin: 0
+  padding: 0
+
+.rows
+  padding: 0
+  margin: 0
+  margin-left: -10px
+  margin-top: 50px
+  margin-bottom: 30px
+  border-top: 1px solid #ddd
+  width: $bigcolumn_width
+  overflow: auto
+  h1
+    font-size: 19pt
+  .row
+    display: block
+    margin: 0
+    padding: 0
+    width: 280px
+    margin-right: 10px
+    float: left
+  .row.last,.bigrow.last
+    margin: 0
+  .bigrow
+    float: left
+    margin: 0
+    padding: 0
+    margin-right: $row_gutter
+    width: $row_width * 2 + $row_gutter
+
+#eintritt
+  position: relative
+  top: -30px
+  left: -30px
+  float: right
+
+#infobox
+  width: 500px
+  border: 1px solid #ddd
+  +border-radius(4px)
+  padding: 10px
+  background: white
+  @include background-image(linear-gradient(#ffffff,#e0e0e0))
+  font-family: "Yanone Kaffeesatz", Arial, sans-serif
+  font-size: 20px
+  margin-bottom: 20px
+  .label
+    display: block
+    float: left
+    font-weight: 500
+    width: 100px
+  .info
+    font-weight: 300
+    display: block
+    margin-left: 100px
+
+#gbutton
+  float: right
+
+#map_canvas
+  width: 500px
+  border: 1px solid #ddd
+  +border-radius(4px)
+  padding: 10px
+  background: white
+  @include background-image(linear-gradient(#ffffff,#e0e0e0))
+  height: 400px
+
+.sideblock
+  margin-bottom: 20px
+
+#snbuttons
+  overflow: auto
+  height: 200px
+
+.fbshare 
+  margin: 0 13px
+
+.twitter-share-button 
+  float: left
+  margin-right: 13px
+
+.sponsor
+  display: inline-block
+  padding: 4px
+  margin: 4px 4px 4px 0

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>PythonCamp Cologne 16./17.4.2011</title>
+    <meta name="description" content="Das nächste PythonCamp Köln wird am 16. und 17. April 2011 bei der GFU Cyrus AG in Köln stattfinden.">
+    <meta name="author" content="PythonCamp Team">
+
+    <meta property="og:title" content="PythonCamp Cologne 2011" /> 
+    <meta property="og:site_name" content="PythonCamp Cologne 2011" /> 
+    <meta property="og:type" content="website" /> 
+    <meta property="og:url" content="http://pythoncamp.de/" /> 
+    <meta property="og:image" content="http://pythoncamp.de/img/facebook.png" /> 
+    <meta property="og:description" content="Das PythonCamp Cologne 2011 wird am 16. und 17. April 2011 bei der GFU Cyrus AG in Köln stattfinden." /> 
+    <meta property="fb:admins" content="652229223" /> 
+    
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+    
+
+    <link rel="index" title="PythonCamp Cologne 2011" href="http://pythoncamp.de/" /> 
+    <link rel="canonical" href="http://pythoncamp.de/" /> 
+
+    <link  href="http://fonts.googleapis.com/css?family=Lekton:400,italic,700" rel="stylesheet" type="text/css" ></link>
+    <link  href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="css/screen.css" type="text/stylesheet"><link>
+    <script src="/js/head.min.js"></script>
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+    <script>
+        head.js("/js/jquery.min.js", function() {
+        });
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        <header id="topheader">
+            <div id="headercontent">
+                <h1 id="logo"><a href="/"><img src="img/logo.png" /></a></h1>
+            </div>
+        </header>
+
+        <nav>
+            <div id="navblock">
+                <ul id="navcontent">
+                    <li><a href="/">Startseite</a></li>
+                    <!--<li><a href="">Barcamp?</a></li>-->
+                    <li><a href="/wannwo.html">Wann und wo</a></li>
+                    <!--<li><a href="">Hotels</a></li>-->
+                    <!--<li><a href="">Anreise</a></li>-->
+                </ul>
+            </div>
+        </nav>
+        <div id="main">
+            <div class="page">
+                <div class="bigcolumn" id="content">
+                    {% block content %}
+                    <div id="block-welcome" class="block start">
+                        <h2>Willkommen zum PythonCamp Cologne!</h2>
+                        <p>
+                        Ein Barcamp ist eine Konferenz, auf der es im Vorfeld
+                        kein Programm gibt, da dieses von den Teilnehmern erst spontan
+                        vor Ort zusammengestellt wird und auch fortwährend noch geändert
+                        werden kann.
+                        </p>
+                        <p>
+                        Diskutiere spontan mit anderen über deine aktuellen Ideen, Probleme
+                        und Projekte, höre anderen zu, wie sie über ihre Arbeit berichten
+                        oder setzt euch zusammen und entwickelt neue Ideen!
+                        </p>
+                        <p>
+                        Alles ist möglich!
+                        </p>
+                        <div class="rows">
+                            <div class="row">
+                                <a href="http://twitter.com/pythoncamp"><img src="img/twitter-feed.png"></a>
+                                <script>
+                                new TWTR.Widget({
+                                  version: 2,
+                                  type: 'profile',
+                                  rpp: 7,
+                                  interval: 6000,
+                                  width: 250,
+                                  height: 250,
+                                  theme: {
+                                    shell: {
+                                      background: '#ffffff',
+                                      color: '#666666'
+                                    },
+                                    tweets: {
+                                      background: '#ffffff',
+                                      color: '#193b59',
+                                      links: '#0fa3d9'
+                                    }
+                                  },
+                                  features: {
+                                    scrollbar: false,
+                                    loop: false,
+                                    live: true,
+                                    hashtags: true,
+                                    timestamp: true,
+                                    avatars: false,
+                                    behavior: 'all'
+                                  }
+                                }).render().setUser('pythoncamp').start();
+                                </script>
+                            </div>
+                            <div class="row last">
+                                <img src="img/twitter-search.png">
+                                <script>
+                                new TWTR.Widget({
+                                  version: 2,
+                                  type: 'search',
+                                  rpp: 7,
+                                  search: 'pycamp',
+                                  title: "Live-Suche",
+                                  subject: "#pycamp",
+                                  interval: 6000,
+                                  width: 250,
+                                  height: 250,
+                                  theme: {
+                                    shell: {
+                                      background: '#ffffff',
+                                      color: '#666666'
+                                    },
+                                    tweets: {
+                                      background: '#ffffff',
+                                      color: '#193b59',
+                                      links: '#0fa3d9'
+                                    }
+                                  },
+                                  features: {
+                                    scrollbar: false,
+                                    loop: false,
+                                    live: true,
+                                    hashtags: true,
+                                    timestamp: true,
+                                    avatars: false,
+                                    behavior: 'default'
+                                  }
+                                }).render().start();
+                                </script>
+                            </div>
+                        </div> <!-- rows -->
+                    </div> <!-- welcome-block -->
+                    {% endblock %}
+                </div> <!-- content -->
+                <aside>
+                    <h2>Anmeldung</h2>
+                    <div class="sideblock">
+                        <img src="img/eintritt.png" id="eintritt" />
+                        <p>
+                        Die Anmeldung ist ab sofort geöffnet!
+                        </p>
+                        <p>
+                        Ihr könnt euch einerseits einfach in den Facebook-Event
+                        eintragen oder aber euren Namen im Etherpad hinterlassen.
+                        </p>
+                        <p>
+                        Das ist alles!
+                        </p>
+                        <a target="anmeldung" href="http://www.facebook.com/event.php?eid=182166728482906"><img class="half" src="img/button_facebook.png" /></a>
+                        <a target="anmeldung" href="http://openetherpad.org/pycamp"><img class="half" src="img/button_etherpad.png" /></a>
+                    </div>
+                    <h2>Erzähle anderen davon!</h2>
+                    <div id="snbuttons">
+                        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpythoncamp.de%2F&amp;layout=standard&amp;show_faces=true&amp;width=330&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:330px; height:80px;" allowTransparency="true"></iframe>
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-count="vertical" data-via="pythoncamp" data-related="pycologne:Python Cologne User Group">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        <a name="fb_share" type="box_count" class="fbshare" href="http://www.facebook.com/sharer.php">Teilen</a><script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script> 
+                        
+                    </div>
+                    <h2>Sponsoren</h2>
+                    <a class="sponsor" href="http://gfu.net"><img src="/img/sponsor-gfu.jpg" /></a>
+                    <a class="sponsor" href="http://python.de"><img src="/img/sponsor-pycologne.png" /></a>
+                    </div>
+                </aside>
+            </div> <!-- page -->
+        </div> <!-- main -->
+        <footer>
+            <div id="footercontent">
+                <a href="impressum.html">Impressum</a>
+            </div>
+        </footer>
+    </div> <!--! end of #container -->
+
+
+    <!--[if lt IE 7 ]>
+        <script src="js/dd_belatedpng.js?v=1"></script>
+    <![endif]-->
+
+  
+</body>
+</html>
+

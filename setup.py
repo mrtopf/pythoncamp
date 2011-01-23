@@ -1,0 +1,32 @@
+from setuptools import setup, find_packages
+import sys, os
+
+version = '0.0'
+
+setup(name='pythoncamp',
+      version=version,
+      description="Website for PythonCamp Cologne",
+      long_description="""\
+""",
+      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      keywords='',
+      author='Christian Scholz',
+      author_email='cs@comlounge.net',
+      url='http://pythoncamp.de',
+      license='MIT',
+      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires=[
+        "logbook",
+        "werkzeug",
+        "routes",
+        "jinja2",
+        "quantumcore.storages",
+        "quantumcore.exceptions",
+      ],
+      entry_points="""
+        [paste.app_factory]
+        frontend = pythoncamp.http.main:frontend_factory
+      """,
+      )
